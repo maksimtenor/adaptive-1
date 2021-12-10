@@ -1,0 +1,99 @@
+/* ------- Desktop First --------- */
+/* Large Devices, Wide Screens */ 
+@media only screen and (max-width: 1200px) {
+	footer .footer__wrapper span {
+		margin-top: 20px;
+		text-align: center;
+	}
+	ul {
+		padding: 0;
+	}
+}
+
+/* Medium Devices, Desctops */
+@media only screen and (max-width: 982px) {
+	footer .footer__wrapper span {
+		max-width: 100vw;
+		margin-top: 20px;
+		margin-left: unset;
+		text-align: center;
+		color: rgb(197, 197, 197);
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+	footer .footer__wrapper span {
+		max-width: 100vw;
+		margin-left: unset;
+		text-align: center;
+		color: rgb(197, 197, 197);
+	}
+	.footer__wrapper_logo {
+		margin-right: 10px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+	footer .footer__wrapper {
+		padding: 15px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		align-content: center;
+		flex-wrap: wrap;
+  }
+  footer .footer__wrapper span {
+	max-width: 100vw;
+	margin-left: unset;
+	text-align: center;
+	color: rgb(197, 197, 197);
+}
+.header__menu {
+	display: none;
+}
+}
+
+@media only screen and (max-width: 449px) {
+	.footer__wrapper_logo {
+		margin-right: unset;
+	}
+}
+
+/* Custom, Iphone Retina */
+@media only screen and (max-width: 320px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (pointer:coarse) {
+	.head__wrapper ul li:hover {
+		color: #000;
+	}
+	.user:hover {
+		background-color: #8d8d8d;
+	}
+	.card-item:hover {
+		box-shadow: none;
+	}
+	.card-item .item--button:hover {
+		background-color: rgb(255, 255, 255);
+	}
+	#show__button:hover {
+		background-color: #000;
+		transition: none;
+	}
+	.footer__wrapper ul li:hover {
+		color: #fff;
+	}
+	}

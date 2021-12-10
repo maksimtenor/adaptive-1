@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pet adaptive project</title>
+
+	<link rel="icon" sizes="192x192"
+		href="data:image/jpeg;base64,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">
+	<meta name="theme-color" content="#883131">
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="adaptive.css">
+	<script defer src="script.js"></script>
+</head>
+
+<body>
+
+	<div class="flex-container">
+		<header>
+			<div class="head__wrapper">
+				<div class="head__wrapper_logo">LOGO</div>
+				<ul class="header__menu">
+					<li><a href="">Home</a></li>
+					<li><a href="">About Us</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+				<div class="user">img</div>
+			</div>
+		</header>
+		<main>
+			<div class="main__wrapper">
+				<div class="card-item">
+					<div class="item--logo">1</div>
+					<span class="item--descr">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Vestibulum elementum tempus nunc eu dapibus.
+						Nullam hendrerit quis nulla quis congue.
+						Nunc a scelerisque enim. Vivamus maximus venenatis nulla non tempor.
+					</span>
+					<button class="item--button">Add</button>
+				</div>
+				<div class="card-item">
+					<div class="item--logo">2</div>
+					<span class="item--descr">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Vestibulum elementum tempus nunc eu dapibus.
+						Nullam hendrerit quis nulla quis congue.
+						Nunc a scelerisque enim. Vivamus maximus venenatis nulla non tempor.
+					</span>
+					<button class="item--button">Add</button>
+				</div>
+				<div class="card-item">
+					<div class="item--logo">3</div>
+					<span class="item--descr">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Vestibulum elementum tempus nunc eu dapibus.
+						Nullam hendrerit quis nulla quis congue.
+						Nunc a scelerisque enim. Vivamus maximus venenatis nulla non tempor.
+					</span>
+					<button class="item--button">Add</button>
+				</div>
+				<div class="card-item">
+					<div class="item--logo">4</div>
+					<span class="item--descr">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Vestibulum elementum tempus nunc eu dapibus.
+						Nullam hendrerit quis nulla quis congue.
+						Nunc a scelerisque enim. Vivamus maximus venenatis nulla non tempor.
+					</span>
+					<button class="item--button">Add</button>
+				</div>
+				<div id="hidden">
+					<div class="card-item">
+						<div class="item--logo">5</div>
+						<span class="item--descr">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Vestibulum elementum tempus nunc eu dapibus.
+							Nullam hendrerit quis nulla quis congue.
+							Nunc a scelerisque enim. Vivamus maximus venenatis nulla non tempor.
+						</span>
+						<button class="item--button">Add</button>
+					</div>
+					<div class="card-item">
+						<div class="item--logo">6</div>
+						<span class="item--descr">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Vestibulum elementum tempus nunc eu dapibus.
+							Nullam hendrerit quis nulla quis congue.
+							Nunc a scelerisque enim. Vivamus maximus venenatis nulla non tempor.
+						</span>
+						<button class="item--button">Add</button>
+					</div>
+					<div class="card-item">
+						<div class="item--logo">7</div>
+						<span class="item--descr">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Vestibulum elementum tempus nunc eu dapibus.
+							Nullam hendrerit quis nulla quis congue.
+							Nunc a scelerisque enim. Vivamus maximus venenatis nulla non tempor.
+						</span>
+						<button class="item--button">Add</button>
+					</div>
+					<div class="card-item">
+						<div class="item--logo">8</div>
+						<span class="item--descr">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Vestibulum elementum tempus nunc eu dapibus.
+							Nullam hendrerit quis nulla quis congue.
+							Nunc a scelerisque enim. Vivamus maximus venenatis nulla non tempor.
+						</span>
+						<button class="item--button">Add</button>
+					</div>
+				</div>
+
+			</div>
+			<button id="show__button">Показать ещё</button>
+		</main>
+		<footer>
+			<div class="footer__wrapper">
+				<div class="footer__wrapper_logo">LOGO</div>
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">About Us</a></li>
+					<li><a href="">Contact</a></li>
+					<li><a href="">Maps</a></li>
+					<li><a href="">Gallery</a></li>
+				</ul>
+				<span>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Vestibulum elementum tempus nunc eu dapibus.
+					Nullam hendrerit quis nulla quis congue.
+					Nunc a scelerisque enim. Vivamus maximus venenatis nulla non tempor.
+				</span>
+			</div>
+		</footer>
+	</div>
+
+</body>
+
+</html>
