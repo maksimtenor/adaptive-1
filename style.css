@@ -12,7 +12,144 @@
 /****************** BURGER NAVIGATION START ******************/
 /************************************************/
 
+/* скрываем чекбокс */
+#menu__toggle {
+	opacity: 0;
+ }
+ /* стилизуем кнопку */
+ .menu__btn {
+	display: flex; /* используем flex для центрирования содержимого */
+	align-items: center;  /* центрируем содержимое кнопки */
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	z-index: 999;
+ }
+ /* добавляем "гамбургер" */
+ .menu__btn > span,
+ .menu__btn > span::before,
+ .menu__btn > span::after {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #616161;
+ }
+ .menu__btn > span::before {
+	content: '';
+	top: -8px;
+ }
+ .menu__btn > span::after {
+	content: '';
+	top: 8px;
+ }
 
+/* Теперь стилизуем само меню. 
+По-умолчанию оно будет скрыто — visibility: hidden, 
+а открываться будет при установки галки на чекбокс. */
+
+/* контейнер меню */
+.menu__box {
+	display: block;
+	position: fixed;
+	visibility: hidden;
+	top: 0;
+	right: -100%;
+	z-index: 99;
+
+	width: 100%;
+	height: 100%;
+
+	margin: 0;
+	padding: 80px 0;
+
+	list-style: none;
+	text-align: center;
+
+	background-color: #eceff1e1;
+	box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+
+/* элементы меню */
+.menu__item {
+	display: block;
+	padding: 12px 24px;
+
+	color: #333;
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+
+	text-decoration: none;
+}
+.menu__item:hover {
+	background-color: #cfd8dc;
+}
+
+/* Возможно, вам покажется непонятной строка 
+.menu__btn > span, а именно комбинатор >.
+Этот комбинатор находит прямых потомков элементов 
+отобранных первым селектором. */
+
+/* Открыть / закрыть меню
+Отлично, со стилизацией закончили, 
+однако меню у нас до сих пор не работает. 
+Самое время перейти к главной теме этого 
+туториала — как реализовать открытие / закрытие 
+меню только на CSS, используя чекбокс? */
+
+#menu__toggle:checked ~ .menu__btn > span {
+	transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+	top: 0;
+	transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+	top: 0;
+	transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+	visibility: visible;
+	right: 0;
+}
+
+/* По порядку, начиная с самого простого:
+Свойство transform: rotate(45deg) — поворачивает элемент 
+на 45 градусов. Поворачивая элементы кнопки меню под разным 
+углом, мы получаем значок “крестик”, вместо горизонтальных 
+линий.
+Псевдокласс :checked — находит только выбранные или 
+включенные элементы. В нашем случае при активации чекбокса 
+он становится :сhecked. Подробнее по ссылке — 
+https://developer.mozilla.org/ru/docs/Web/CSS/:checked
+Комбинатор ~ — находит элементы, указанные справа, 
+которые следуют за элементом, указанным слева и имеют с
+ним общего родителя. Подробнее — 
+https://developer.mozilla.org/ru/docs/Web/CSS/General_sibling_selectors 
+*/
+
+/* Добавим немного анимации
+Для этого просто добавим свойство
+ transition-duration: .25s следующим классам: */
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+	transition-duration: .25s;
+}
+
+.menu__box {
+	transition-duration: .25s;
+}
+
+.menu__item {
+	transition-duration: .25s;
+}
 
 /************************************************/
 /****************** BURGER NAVIGATION END ******************/
