@@ -198,14 +198,17 @@ a {
 	color: unset;
 }
 
-
-header {
+header,
+.header {
 	width: 100%;
 	min-height: 70px;
-	background-color: rgb(229,229,229);
+	background-color: rgba(218, 218, 218, 0.966);
 	display: flex;
 	align-content: center;
 	align-items: center;
+	position: block;
+	-webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.493);
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.493);
 }
 
 header .head__wrapper {
@@ -220,8 +223,8 @@ header .head__wrapper {
 
 .head__wrapper_logo {
 	width: 150px;
-	height: 50px;
-	background-color: #8d8d8d;
+	height: 60px;
+	background-size: cover;
 	cursor: pointer;
 	border-radius: 4px;
 	display: flex;
@@ -229,7 +232,10 @@ header .head__wrapper {
 	align-content: center;
 	align-items: center;
 }
-
+.head__wrapper_logo img {
+	width: 100%;
+	height: 100%;
+}
 .head__wrapper > ul{
 	margin: 0;
 	padding: 0;
@@ -255,6 +261,16 @@ header .head__wrapper {
 	border-radius: 50%;
 	border: 1px solid #000;
 	background-color: #8d8d8d;
+	background-image: url(https://sun9-22.userapi.com/impg/o-DcjQ7O5U9Cmjb1c2oTP98GOs3JPtyKSDbixQ/RPQO5Hvusgg.jpg?size=1278x1278&quality=96&sign=d08fb3f7d2eef07d3f70cdae3c8b7d1a&type=album);
+	background-position: center;
+	background-size: cover;
+	-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+ background-size: cover;	
+ image-rendering: -moz-crisp-edges; /* Firefox */
+-ms-interpolation-mode: nearest-neighbor;  /* IE */
+image-rendering: crisp-edges; /* Стандартное свойство */
 	cursor: pointer;
 	transition: all 0.2s ease;
 	display: flex;
@@ -265,7 +281,10 @@ header .head__wrapper {
 .user:hover {
 	background-color: #998686;
 }
-
+.fixed {
+	position: fixed;
+	z-index: 9999;
+}
 
 
 main {
@@ -310,23 +329,31 @@ main .main__wrapper {
 	width: 250px;
 	min-height: 350px;
 	padding: 10px;
-	background-color: rgb(136, 49, 49);
+	background-color: rgba(94, 93, 93, 0.377);
 	display: flex;
 	flex-direction: column;
    flex-wrap: nowrap;
    justify-content: flex-end;
    align-items: center;
 	position: relative;
-	cursor: pointer;
 	transition: all 0.1s ease-in;
+	overflow: hidden;
+	cursor: pointer;
 }
 .card-item:hover {
 	box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.507);
 }
 .item--logo img {
+	width: 100%;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	border: none;
+	transition: all 0.3s ease-in;
+	overflow: hidden;
+}
+.item--logo img:hover {
+	transform: scale(1.3);
 }
 .card-item .item--logo {
 	top: 0;
@@ -338,6 +365,9 @@ main .main__wrapper {
 	align-items: center;
 	align-content: center;
 	justify-content: center;
+	overflow: hidden;
+	transition: all 0.3s ease-in;
+	cursor: pointer;
 }
 .card-item .item--descr {
 	position: absolute;
@@ -349,22 +379,28 @@ main .main__wrapper {
 	height: 130px;
 	overflow: hidden;
 	font-family: "Open Sans";
+	color: rgb(207, 207, 207);
+	cursor: default;
 }
 .card-item .item--button {
 	border: unset;
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(160, 160, 160);
 	border-radius: 4px;
-	width: 200px;
-	height: 50px;
+	width: 150px;
+	height: 25px;
 	margin: 0 0 10px 0;
 	padding: 15px;
 	cursor: pointer;
 	transition: all 0.2s ease;
 	font-weight: 600;
 	overflow: hidden;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 .card-item .item--button:hover {
-	background-color: rgba(0, 172, 43, 0.596);
+	background-color: rgb(255, 255, 255);
 }
 
 #show__button {
@@ -412,8 +448,7 @@ footer .footer__wrapper span {
 
 .footer__wrapper_logo {
 	width: 150px;
-	height: 50px;
-	background-color: #d8d8d8;
+	height: 60px;
 	cursor: pointer;
 	border-radius: 4px;
 	display: flex;
@@ -421,7 +456,10 @@ footer .footer__wrapper span {
 	align-content: center;
 	align-items: center;
 }
-
+.footer__wrapper_logo img {
+	width: 100%;
+	height: 100%;
+}
 .footer__wrapper ul li {
 	display: inline-block;
 	font-family: "Oswald";
