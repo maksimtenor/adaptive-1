@@ -11,7 +11,9 @@
 /************************************************/
 /****************** BURGER NAVIGATION START ******************/
 /************************************************/
-
+.hamburger-menu {
+	display: none;
+}
 /* скрываем чекбокс */
 #menu__toggle {
 	opacity: 0;
@@ -53,7 +55,12 @@
 
 /* контейнер меню */
 .menu__box {
-	display: block;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
 	position: fixed;
 	visibility: hidden;
 	top: 0;
@@ -69,7 +76,7 @@
 	list-style: none;
 	text-align: center;
 
-	background-color: #eceff1e1;
+	background-color: #eceff1f1;
 	box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
 }
 
@@ -223,12 +230,12 @@ header .head__wrapper {
 	align-items: center;
 }
 
-.head__wrapper ul{
+.head__wrapper > ul{
 	margin: 0;
 	padding: 0;
 	height: 100%;
 }
-.head__wrapper ul li {
+.head__wrapper > ul li {
 	display: inline-block;
 	font-family: "Oswald";
 	font-weight: 700;
@@ -236,10 +243,10 @@ header .head__wrapper {
 	font-size: 14px;
 	transition: all 0.1s ease;
 }
-.head__wrapper ul li:not(:last-child) {
+.head__wrapper > ul li:not(:last-child) {
 	margin-right: 50px;
 }
-.head__wrapper ul li:hover {
+.head__wrapper > ul li:hover {
 	color: #ffffff;
 }
 .user {
