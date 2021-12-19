@@ -314,16 +314,13 @@ main .main__wrapper {
 	width: 100%;
 	position: relative;
 	padding: 0 15px;
-	display: flex;
+	display: none;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	align-content: center;
 	flex-wrap: wrap;
 	gap: 20px 20px;
-}
-#hidden {
-	display: none;
 }
 .card-item {
 	width: 250px;
